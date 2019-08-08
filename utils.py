@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 
 # Class with methods for Melhores Destinos 
 class reqMD:
@@ -7,9 +8,9 @@ class reqMD:
     
     def get_status_code(self):
         return self.req.status_code
-    
+
     def get_content(self):
-        return self.content
+        return self.req.content
 
     def get_promos(self):
         soup = BeautifulSoup(self.get_content(), 'html.parser')

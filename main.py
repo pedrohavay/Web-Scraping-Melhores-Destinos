@@ -1,5 +1,4 @@
 import utils
-from bs4 import BeautifulSoup
 
 if __name__ == '__main__':
     req = utils.reqMD('https://www.melhoresdestinos.com.br') # Instance ReqMD class
@@ -12,5 +11,6 @@ HTTP Code: %s
 
     if status_code == 200:
         print('Site Disponível.\n\nObtendo informações...')
+        print(req.get_promos())
     else : 
         print('Site Indisponível.')
