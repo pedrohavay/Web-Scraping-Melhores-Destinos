@@ -14,4 +14,4 @@ class reqMD:
 
     def get_promos(self):
         soup = BeautifulSoup(self.get_content(), 'html.parser')
-        return soup.find_all('div', class_='promocao')
+        return soup.find_all('article', class_='promocao')
